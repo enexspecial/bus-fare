@@ -1,0 +1,33 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <div>
+            <button mat-button>
+            <span>Bus-Fare</span>
+          </button>
+            <button mat-button>About Bus-Fare</button>
+            <button mat-button> Testimonies </button>
+        </div>
+        <div></div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- Body of Login Page -->
+
+<div class='container'>
+    <div fxLayout="row">
+        <div fxFlex="50%"></div>
+        <div class="bus-top" fxFlex="50%">
+            <mat-tab-group>
+                <mat-tab label="Login">
+                    <app-login></app-login>
+                </mat-tab>
+                <mat-tab label="Register">
+                    <app-register></app-register>
+                </mat-tab>
+            </mat-tab-group>
+
+
+        </div>
+    </div>
+
+</div>
