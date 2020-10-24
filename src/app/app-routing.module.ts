@@ -9,7 +9,7 @@ import { PaymentComponent} from './Dashboard/payment/payment.component';
 const routes: Routes = [
   {path: "", pathMatch: "full", component: LandingComponent},
   {path: "dashboard", component: DashboardComponent, children: [
-    {path:"", pathMatch: 'full', component: AccountComponent},
+    {path:"account", component: AccountComponent},
     {path:"payment",  component: PaymentComponent},
   ]}
 

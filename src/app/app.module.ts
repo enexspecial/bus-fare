@@ -1,3 +1,8 @@
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -15,6 +20,9 @@ import { DashboardHeaderComponent } from './Dashboard/header/header.component';
 import { DashboardFooterComponent } from './Dashboard/footer/footer.component';
 import { AccountComponent } from './Dashboard/account/account.component';
 import { PaymentComponent} from './Dashboard/payment/payment.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SidemenuComponent } from './Dashboard/sidemenu/sidemenu.component';
 
 
 
@@ -30,14 +38,22 @@ import { PaymentComponent} from './Dashboard/payment/payment.component';
     DashboardHeaderComponent,
     DashboardFooterComponent,
     AccountComponent,
-    PaymentComponent
-  
+    PaymentComponent,
+    SidemenuComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     CustomComponentModules,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule,
     MDBBootstrapModule.forRoot(),
   ],
   providers: [],
