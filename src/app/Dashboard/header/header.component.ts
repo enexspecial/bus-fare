@@ -5,6 +5,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class DashboardHeaderComponent implements OnInit {
   @Output() sidenavToggle = new EventEmitter();
   constructor() { }
@@ -12,10 +13,10 @@ export class DashboardHeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   onToggleSidenav(){
     this.sidenavToggle.emit();
   }
-
 
 
 }
