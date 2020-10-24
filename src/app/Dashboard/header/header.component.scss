@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 $toolbar-title-padding: 16px !default;
 
@@ -25,3 +26,15 @@ $toolbar-title-padding: 16px !default;
   cursor: pointer;
 
 }
+=======
+#topMenu {
+    width: 250px;
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+    z-index: 999;
+    -ms-overflow-y: auto;
+    overflow-y: auto;
+}
+>>>>>>> refs/remotes/origin/main
