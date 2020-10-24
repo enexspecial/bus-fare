@@ -1,1 +1,14 @@
-<p>sidemenu works!</p>
+<div id="sidebar">
+    <mat-nav-list>
+        <a routerLink='/'>
+            <mat-icon>home</mat-icon>
+        </a>
+        <a routerLink='#'>Profile</a>
+        <a routerLink='/payment'>Wallet</a>
+        <a href="">Bus-Station</a>
+        <a href="">Setting</a>
+    </mat-nav-list>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
