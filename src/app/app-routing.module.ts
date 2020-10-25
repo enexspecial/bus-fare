@@ -8,28 +8,13 @@ import { PaymentComponent} from './Dashboard/payment/payment.component';
 
 
 const routes: Routes = [
-<<<<<<< HEAD
-<<<<<<< HEAD
   {path: "", pathMatch: "full", component: LandingComponent},
   {path: "dashboard", component: DashboardComponent, children: [
-    {path:"account", component: AccountComponent},
-    {path:"payment",  component: PaymentComponent},
-=======
-=======
->>>>>>> refs/remotes/origin/main
-  {path: '', pathMatch: 'full', component: LandingComponent},
-  {path: 'dashboard', component: DashboardComponent, children: [
-    {path: '', pathMatch: 'full', component: IndexComponent},
-    {path: 'account', component: AccountComponent},
-    {path: 'payment',  component: PaymentComponent},
-<<<<<<< HEAD
->>>>>>> 47f89b9963111e708e51780cd6f63aac3386178c
-=======
->>>>>>> refs/remotes/origin/main
+  {path:"account", component: AccountComponent},
+  {path:"payment",  component: PaymentComponent},
+
   ]}
-
-];
-
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-=======
+import {ChangeDetectorRef, OnDestroy} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
->>>>>>> 47f89b9963111e708e51780cd6f63aac3386178c
-=======
-import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
->>>>>>> refs/remotes/origin/main
 
 @Component({
   selector: 'app-dashboard-sidemenu',
@@ -17,16 +9,7 @@ import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
   styleUrls: ['./sidemenu.component.scss']
 })
 export class DashboardSidemenuComponent implements OnDestroy {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-
-  constructor() { }
-=======
-=======
-
->>>>>>> refs/remotes/origin/main
   mobileQuery: MediaQueryList;
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
@@ -48,10 +31,6 @@ export class DashboardSidemenuComponent implements OnDestroy {
   ngOnDestroy(): void {
     throw new Error('Method not implemented.');
   }
-<<<<<<< HEAD
->>>>>>> 47f89b9963111e708e51780cd6f63aac3386178c
-=======
->>>>>>> refs/remotes/origin/main
 
   ngOnInit(): void {
 

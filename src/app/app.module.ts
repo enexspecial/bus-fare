@@ -24,17 +24,7 @@ import { DashboardSidemenuComponent } from './Dashboard/sidemenu/sidemenu.compon
 import { DashboardFooterComponent } from './Dashboard/footer/footer.component';
 import { AccountComponent } from './Dashboard/account/account.component';
 import { PaymentComponent} from './Dashboard/payment/payment.component';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { SidemenuComponent } from './Dashboard/sidemenu/sidemenu.component';
-=======
 import { IndexComponent } from './Dashboard/index/index.component';
->>>>>>> 47f89b9963111e708e51780cd6f63aac3386178c
-=======
-import { IndexComponent } from './Dashboard/index/index.component';
->>>>>>> refs/remotes/origin/main
 
 
 
@@ -52,16 +42,8 @@ import { IndexComponent } from './Dashboard/index/index.component';
     DashboardFooterComponent,
     AccountComponent,
     PaymentComponent,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    SidemenuComponent
-
-=======
-=======
->>>>>>> refs/remotes/origin/main
     IndexComponent
-  
->>>>>>> 47f89b9963111e708e51780cd6f63aac3386178c
+
   ],
   imports: [
     BrowserModule,
@@ -70,21 +52,15 @@ import { IndexComponent } from './Dashboard/index/index.component';
     HttpClientModule,
     BrowserAnimationsModule,
     CustomComponentModules,
-<<<<<<< HEAD
-<<<<<<< HEAD
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     MatListModule,
-=======
     HttpClientModule,
     FormsModule,
->>>>>>> 47f89b9963111e708e51780cd6f63aac3386178c
-=======
     HttpClientModule,
     FormsModule,
->>>>>>> refs/remotes/origin/main
     MDBBootstrapModule.forRoot(),
   ],
   providers: [
