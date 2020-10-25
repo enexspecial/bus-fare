@@ -9,25 +9,7 @@
       </mat-toolbar-row>
     </mat-toolbar>
 
-    <mat-nav-list>
-
-      <h2 matSubheader> {{ 'MY_WORK' }} </h2>
-      <a mat-list-item [routerLink]='["account"]' (sidenavToggle)="sidenav.close()"  >
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
-      </a>
-      <a mat-list-item [routerLink]='["payment"]' (sidenavToggle)="sidenav.close()"  >
-        <mat-icon>payment</mat-icon>
-        <span>Payment</span>
-      </a>
-      <a mat-list-item routerLink="" (sidenavToggle)="sidenav.close()"  >
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
-      </a>
-      <mat-divider></mat-divider>
-
-
-    </mat-nav-list>
+    <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
 
   </mat-sidenav>
 

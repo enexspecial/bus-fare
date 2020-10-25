@@ -1,3 +1,4 @@
+import { SidenavListComponent } from './Dashboard/sidenav-list/sidenav-list.component';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -42,6 +43,7 @@ import { IndexComponent } from './Dashboard/index/index.component';
     DashboardFooterComponent,
     AccountComponent,
     PaymentComponent,
+    SidenavListComponent,
     IndexComponent
 
   ],
