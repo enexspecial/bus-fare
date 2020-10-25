@@ -17,4 +17,9 @@ export class AppService {
   postData(url, data){
     return this._http.post(this.URL + url, data);
   }
+
+  payment(url, data){
+    return this._http.post(this.URL + url, data);
+  }
+
 }

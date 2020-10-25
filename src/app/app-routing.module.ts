@@ -5,6 +5,7 @@ import { DashboardComponent} from './Dashboard/dashboard/dashboard.component';
 import { IndexComponent } from './Dashboard/index/index.component';
 import { AccountComponent } from './Dashboard/account/account.component';
 import { PaymentComponent} from './Dashboard/payment/payment.component';
+import { DashComponent } from './Dashboard/dash/dash.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: "dashboard", component: DashboardComponent, children: [
   {path:"account", component: AccountComponent},
   {path:"payment",  component: PaymentComponent},
+  {path:"dash",  component: DashComponent},
 
   ]}
 ]

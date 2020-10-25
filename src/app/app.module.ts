@@ -1,3 +1,4 @@
+import { QRCodeModule } from 'angular2-qrcode';
 import { SidenavListComponent } from './Dashboard/sidenav-list/sidenav-list.component';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
@@ -26,6 +27,11 @@ import { DashboardFooterComponent } from './Dashboard/footer/footer.component';
 import { AccountComponent } from './Dashboard/account/account.component';
 import { PaymentComponent} from './Dashboard/payment/payment.component';
 import { IndexComponent } from './Dashboard/index/index.component';
+import { DashComponent } from './Dashboard/dash/dash.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 
@@ -44,7 +50,8 @@ import { IndexComponent } from './Dashboard/index/index.component';
     AccountComponent,
     PaymentComponent,
     SidenavListComponent,
-    IndexComponent
+    IndexComponent,
+    DashComponent
 
   ],
   imports: [
@@ -64,6 +71,11 @@ import { IndexComponent } from './Dashboard/index/index.component';
     HttpClientModule,
     FormsModule,
     MDBBootstrapModule.forRoot(),
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    LayoutModule,
+    QRCodeModule,
   ],
   providers: [
     AppService,
