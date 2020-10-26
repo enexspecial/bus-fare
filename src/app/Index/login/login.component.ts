@@ -30,8 +30,13 @@ export class LoginComponent implements OnInit {
       password: this.loginData.password
     };
 
-    this.appservice.postData(`login`, Data).subscribe((res) => {
-      console.log(res);
+    this.appservice.postData(`login`, Data).subscribe((res: any) => {
+      console.log(res.data);
+      const holdData = [];
+      if (res.success){
+        localStorage.setItem('data', JSON.stringify(res.data));
+        this.router.navigate(['/dashboard']);
+      }
     });
   }
 
