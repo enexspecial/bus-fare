@@ -1,3 +1,26 @@
-<app-dashboard-header></app-dashboard-header>
 
-<!-- <app-dashboard-footer></app-dashboard-footer> -->
+<mat-sidenav-container autosize>
+
+  <mat-sidenav #sidenav mode="over"  role="navigation">
+
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <h2> {{ 'APP_TOOLBAR_TITLE'  }} </h2>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+<app-dashboard-header (sidenavToggle)="sidenav.toggle()" ></app-dashboard-header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+

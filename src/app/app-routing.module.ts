@@ -6,7 +6,17 @@ import { IndexComponent } from './Dashboard/index/index.component';
 import { AccountComponent } from './Dashboard/account/account.component';
 import { PaymentComponent} from './Dashboard/payment/payment.component';
 import {LoginComponent} from './Index/login/login.component';
+import { DashComponent } from './Dashboard/dash/dash.component';
 
+// const routes: Routes = [
+//   {path: "", pathMatch: "full", component: LandingComponent},
+//   {path: "dashboard", component: DashboardComponent, children: [
+//   {path:"account", component: AccountComponent},
+//   {path:"payment",  component: PaymentComponent},
+//   {path:"dash",  component: DashComponent},
+
+//   ]}
+// ]
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: LandingComponent},
@@ -15,6 +25,7 @@ const routes: Routes = [
     {path: '', pathMatch: 'full', component: IndexComponent},
     {path: 'account', component: AccountComponent},
     {path: 'payment',  component: PaymentComponent},
+    {path: 'dash',  component: DashComponent},
   ]}
 
 ];

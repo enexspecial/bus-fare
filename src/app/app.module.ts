@@ -1,3 +1,10 @@
+import { QRCodeModule } from 'angular2-qrcode';
+import { SidenavListComponent } from './Dashboard/sidenav-list/sidenav-list.component';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -20,6 +27,11 @@ import { DashboardFooterComponent } from './Dashboard/footer/footer.component';
 import { AccountComponent } from './Dashboard/account/account.component';
 import { PaymentComponent} from './Dashboard/payment/payment.component';
 import { IndexComponent } from './Dashboard/index/index.component';
+import { DashComponent } from './Dashboard/dash/dash.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 
@@ -37,17 +49,33 @@ import { IndexComponent } from './Dashboard/index/index.component';
     DashboardFooterComponent,
     AccountComponent,
     PaymentComponent,
-    IndexComponent
-  
+    SidenavListComponent,
+    IndexComponent,
+    DashComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     CustomComponentModules,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule,
+    HttpClientModule,
+    FormsModule,
     HttpClientModule,
     FormsModule,
     MDBBootstrapModule.forRoot(),
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    LayoutModule,
+    QRCodeModule,
   ],
   providers: [
     AppService,

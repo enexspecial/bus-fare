@@ -1,60 +1,100 @@
-#sidebar {
-    width: 250px;
-    position: fixed;
-    top: 56px;
-    bottom: 0;
-    background: #fff;
-    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
-    z-index: 999;
-    -ms-overflow-y: auto;
-    overflow-y: auto;
-    .mat-nav-list {
-        width: 100%;
-        a {
-            .mat-icon {
-                margin-right: 15px;
-            }
-            display: block;
-        }
-    }
-}
 
-.nested-menu {
-    .nested {
-        list-style-type: none;
-    }
-    .submenu {
-        display: none;
-        height: 0;
-    }
-    & .expand {
-        &.submenu {
-            display: inline;
-            list-style-type: none;
-            height: auto;
-            margin: 0;
-            padding-left: 0px;
-            li {
-                padding-left: 30px;
-                a {
-                    // padding: 10px;
-                    display: block;
-                }
-            }
-        }
-    }
-}
+@mixin crm-nav-theme($theme) {
 
-i::before {
-    margin-left: 0px;
-}
 
-@media screen and (max-width: 992px) {
-    #sidebar {
-        left: -250px;
-    }
-}
 
-.handy {
-    cursor: pointer;
+  $nav-list-icon-padding: 12px !default;
+
+  $toolbar-title-padding: 16px !default;
+
+
+
+  .list-item-active {
+
+    font-weight: bold;
+
+    color: mat-color(map-get($theme, accent), darker) !important;
+
+    background: rgba(0, 0, 0, 0.04);
+
+  }
+
+
+
+  .nav-list-icon {
+
+    margin: 0 $nav-list-icon-padding 0 $nav-list-icon-padding;
+
+  }
+
+
+
+  .toolbar-title {
+
+    margin: 0 $toolbar-title-padding 0 $toolbar-title-padding;
+
+  }
+
+
+
 }
+// #sidebar {
+//     width: 250px;
+//     position: fixed;
+//     top: 56px;
+//     bottom: 0;
+//     background: #fff;
+//     box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+//     z-index: 999;
+//     -ms-overflow-y: auto;
+//     overflow-y: auto;
+//     .mat-nav-list {
+//         width: 100%;
+//         a {
+//             .mat-icon {
+//                 margin-right: 15px;
+//             }
+//             display: block;
+//         }
+//     }
+// }
+
+// .nested-menu {
+//     .nested {
+//         list-style-type: none;
+//     }
+//     .submenu {
+//         display: none;
+//         height: 0;
+//     }
+//     & .expand {
+//         &.submenu {
+//             display: inline;
+//             list-style-type: none;
+//             height: auto;
+//             margin: 0;
+//             padding-left: 0px;
+//             li {
+//                 padding-left: 30px;
+//                 a {
+//                     // padding: 10px;
+//                     display: block;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// i::before {
+//     margin-left: 0px;
+// }
+
+// @media screen and (max-width: 992px) {
+//     #sidebar {
+//         left: -250px;
+//     }
+// }
+
+// .handy {
+//     cursor: pointer;
+// }
