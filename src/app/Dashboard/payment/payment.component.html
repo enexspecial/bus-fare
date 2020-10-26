@@ -5,7 +5,9 @@
     <div class="main-div">
       <mat-card class="example-card">
         <mat-card-header>
-          <mat-card-title>Scan for payment</mat-card-title>
+          <mat-card-title>
+            <button mat-raised-button color="accent">Click to start</button>
+          </mat-card-title>
         </mat-card-header>
         <mat-card-content>
           <qr-code [value]="dataToString" size="300"></qr-code>
@@ -24,5 +26,7 @@
 
 </mat-tab-group>
 </div>
+
+
 
 

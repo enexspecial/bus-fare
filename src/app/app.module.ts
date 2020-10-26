@@ -1,3 +1,4 @@
+import { MatTableModule } from '@angular/material/table';
 import { QRCodeModule } from 'angular2-qrcode';
 import { SidenavListComponent } from './Dashboard/sidenav-list/sidenav-list.component';
 import { MatListModule } from '@angular/material/list';
@@ -32,6 +33,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -74,8 +76,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    MatTableModule,
     LayoutModule,
     QRCodeModule,
+    FlexLayoutModule
   ],
   providers: [
     AppService,

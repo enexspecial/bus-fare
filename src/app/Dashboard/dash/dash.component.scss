@@ -1,5 +1,5 @@
 .grid-container {
-  margin: 20px;
+  margin: 10px;
 }
 
 .dashboard-card {
@@ -18,4 +18,26 @@
 
 .dashboard-card-content {
   text-align: center;
+}
+
+.card1{
+  background-color:#17a2b8;
+}
+.card2{
+  background-color:#28a745;
+}
+.card3{
+  background-color:#ffc107;
+}
+.card4{
+  background-color: #dc3545;
+}
+
+
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 200px;
 }

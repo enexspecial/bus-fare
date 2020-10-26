@@ -1,13 +1,21 @@
 a {
   text-decoration: none;
-  color: white;
+  color: #f8f9fa !important;
+
 }
 
 a:hover, a:active {
-  color:orangered;
+  color: #ffffff;
+  -webkit-tap-highlight-color: transparent !important;
+  background-color: #6c757d !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  border-radius: 5px;
 }
 
 .nav-caption {
   display: inline-block;
   padding-left: 6px;
 }
+
+

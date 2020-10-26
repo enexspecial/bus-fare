@@ -1,7 +1,78 @@
 <div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
+  <h1 style="margin-left: 16px; margin-bottom: 0px;;" >Dashboard</h1>
+ <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid" >
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" >
+      <mat-card class="mat-elevation-z4 card1">
+        <mat-card-header>
+          <mat-card-title>Himalayan Peaks</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            The Himalayas is a mountain range in Asia.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+</div>
+
+<div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" >
+  <mat-card class="mat-elevation-z4 card2">
+    <mat-card-header>
+      <mat-card-title>Himalayan Peaks</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        The Himalayas is a mountain range in Asia.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" >
+  <mat-card class="mat-elevation-z4 card3">
+    <mat-card-header>
+      <mat-card-title>Himalayan Peaks</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        The Himalayas is a mountain range in Asia.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" >
+  <mat-card color="accent"  class="mat-elevation-z4 card4">
+    <mat-card-header>
+      <mat-card-title>Himalayan Peaks</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        The Himalayas is a mountain range in Asia.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</div>
+
+
   <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="1" [rowspan]="1">
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
@@ -16,9 +87,11 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+          <div [innerHTML]="card.body"></div>
         </mat-card-content>
       </mat-card>
+
     </mat-grid-tile>
   </mat-grid-list>
 </div>
+
