@@ -4,9 +4,13 @@ mat-sidenav-container, mat-sidenav-content, mat-sidenav {
 }
 
 mat-sidenav {
-  max-width: 250px;
-  overflow: hidden;
+  max-width: 250px !important;
+  overflow: hidden !important;
 }
 
-
+mat-toolbar{
+  background-color: #343a40 !important;
+  color:#fff !important;
+  font-weight: bold !important;
+}
 

@@ -1,6 +1,12 @@
 <mat-nav-list>
+  <mat-divider  ></mat-divider>
+  <a mat-list-item [routerLink]='["#"]'  >
+    <div class="image">
+      <img src="assets/avatar.jpg" class="img-circle elevation-2" alt="User Image">
+    </div>
+    <div class="info"> <span>John Henry</span></div>
 
-  <h2 matSubheader> {{ 'MY_WORK' }} </h2>
+  </a>
   <mat-divider  ></mat-divider>
   <a mat-list-item [routerLink]='["dash"]'  (click)="onSidenavClose()"  >
     <mat-icon>home</mat-icon>

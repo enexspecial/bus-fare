@@ -11,7 +11,7 @@ export class DashComponent {
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
-     return [
+      return [
         {
           title: 'Card 2',
           body: `Card Content Here 2`,
