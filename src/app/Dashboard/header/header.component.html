@@ -1,13 +1,12 @@
-
-<mat-toolbar color="accent"   class="crm-navigation-bar ">
-
-
-
-  <mat-toolbar-row>
+<mat-toolbar color="accent" class="crm-navigation-bar ">
 
 
 
-    <button mat-icon-button (click)="onToggleSidenav()">
+    <mat-toolbar-row>
+
+
+
+        <button mat-icon-button (click)="onToggleSidenav()">
 
       <mat-icon>menu</mat-icon>
 
@@ -15,55 +14,55 @@
 
 
 
-    <span class="toolbar-title"> {{ 'APP_TOOLBAR_TITLE'  }} </span>
+        <span class="toolbar-title"> Bus-Fare </span>
 
 
 
-    <div fxFlex fxLayout fxLayoutAlign="flex-end">
+        <div fxFlex fxLayout fxLayoutAlign="flex-end">
 
 
 
-      <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+            <ul fxLayout fxLayoutGap="20px" class="navigation-items">
 
 
 
-        <li fxHide.xs>
+                <li fxHide.xs>
 
-          <button mat-icon-button>
+                    <button mat-icon-button>
 
             <mat-icon> settings </mat-icon>
 
           </button>
 
-        </li>
+                </li>
 
 
 
-        <li fxHide.xs>
+                <li fxHide.xs>
 
-          <button mat-icon-button>
+                    <button mat-icon-button>
 
             <mat-icon> help_outline </mat-icon>
 
           </button>
 
-        </li>
+                </li>
 
 
 
-        <li>
+                <li>
 
-          <button mat-icon-button [matMenuTriggerFor]="auth">
+                    <button mat-icon-button [matMenuTriggerFor]="auth">
 
             <mat-icon> person </mat-icon>
 
           </button>
 
-          <mat-menu #auth="matMenu">
+                    <mat-menu #auth="matMenu">
 
 
 
-            <button mat-menu-item >
+                        <button mat-menu-item>
 
               <mat-icon> person </mat-icon>
 
@@ -73,11 +72,11 @@
 
 
 
-            <mat-divider></mat-divider>
+                        <mat-divider></mat-divider>
 
 
 
-            <button mat-menu-item >
+                        <button mat-menu-item>
 
               <mat-icon> exit_to_app </mat-icon>
 
@@ -87,21 +86,18 @@
 
 
 
-          </mat-menu>
+                    </mat-menu>
 
-        </li>
-
-
-
-      </ul>
+                </li>
 
 
 
-    </div>
+            </ul>
 
 
 
-  </mat-toolbar-row>
+        </div>
 
 
 
+    </mat-toolbar-row>

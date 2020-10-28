@@ -1,35 +1,33 @@
-
-<app-dashboard-header
-(toggleSidenav)="sidenav.toggle()">
+<app-dashboard-header (toggleSidenav)="sidenav.toggle()">
 </app-dashboard-header>
 <mat-sidenav-container autosize>
 
-  <mat-sidenav #sidenav mode="side">
+    <mat-sidenav #sidenav mode="side">
 
-    <mat-toolbar>
-      <mat-toolbar-row>
-        <h2> {{ 'APP_TOOLBAR_TITLE'  }} </h2>
-      </mat-toolbar-row>
-    </mat-toolbar>
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <h2> UserName Here </h2>
+            </mat-toolbar-row>
+        </mat-toolbar>
 
-    <mat-nav-list>
+        <mat-nav-list>
 
-      <h2 matSubheader> {{ 'MY_WORK' }} </h2>
+            <h2 matSubheader> {{ 'MY_WORK' }} </h2>
 
 
 
-      <mat-divider></mat-divider>
+            <mat-divider></mat-divider>
 
-      ...
+            ...
 
-    </mat-nav-list>
+        </mat-nav-list>
 
-  </mat-sidenav>
+    </mat-sidenav>
 
-  <mat-sidenav-content>
+    <mat-sidenav-content>
 
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
 
 </mat-sidenav-container>
 
