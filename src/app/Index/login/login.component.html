@@ -1,4 +1,7 @@
 <div class="bus-top">
+  <div *ngIf="invalidLogin" class="alert alert-danger text-center">
+    Invalid Email and/or Password
+  </div>
     <div>
         <mat-form-field>
             <mat-label>Email Address</mat-label>

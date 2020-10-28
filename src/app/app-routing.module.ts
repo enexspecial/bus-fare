@@ -1,3 +1,4 @@
+import { AuthGuard } from './Auth/authGuard';
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LandingComponent } from './Index/landing/landing.component';
@@ -15,20 +16,25 @@ import { DashComponent } from './Dashboard/dash/dash.component';
 //   {path:"payment",  component: PaymentComponent},
 //   {path:"dash",  component: DashComponent},
 
-//   ]}
-// ]
-
 const routes: Routes = [
-  {path: '', pathMatch: 'full', component: LandingComponent},
-  {path: 'login', component: LoginComponent },
-  {path: 'dashboard', component: DashboardComponent, children: [
-    {path: '', pathMatch: 'full', component: IndexComponent},
-    {path: 'account', component: AccountComponent},
-    {path: 'payment',  component: PaymentComponent},
-    {path: 'dash',  component: DashComponent},
-  ]}
+  {path: "", pathMatch: "full", component: LandingComponent},
+  {path: "dashboard", component: DashboardComponent, canActivate: [AuthGuard],
+  children: [
+  {path:"account", component: AccountComponent, canActivateChild: [AuthGuard]},
+  {path:"payment",  component: PaymentComponent, canActivateChild: [AuthGuard]},
+  {path:"dash",  component: DashComponent, canActivateChild: [AuthGuard]},
 
-];
+// const routes: Routes = [
+//   {path: '', pathMatch: 'full', component: LandingComponent},
+//   {path: 'login', component: LoginComponent },
+//   {path: 'dashboard', component: DashboardComponent, children: [
+//     {path: '', pathMatch: 'full', component: IndexComponent},
+//     {path: 'account', component: AccountComponent},
+//     {path: 'payment',  component: PaymentComponent},
+//     {path: 'dash',  component: DashComponent},
+//   ]}
+
+// ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,3 +1,6 @@
+import { AuthGuard } from './Auth/authGuard';
+import { AuthService } from './Auth/auth.service';
+import { MatTableModule } from '@angular/material/table';
 import { QRCodeModule } from 'angular2-qrcode';
 import { SidenavListComponent } from './Dashboard/sidenav-list/sidenav-list.component';
 import { MatListModule } from '@angular/material/list';
@@ -8,7 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
 import { AppService } from './app.service';
 import {CustomComponentModules} from '../app/custom-material.module';
@@ -32,6 +35,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { TokenInterceptor } from './Auth/token.interceptor';
 
 
 
@@ -74,11 +79,17 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    MatTableModule,
     LayoutModule,
     QRCodeModule,
+    FlexLayoutModule
   ],
   providers: [
     AppService,
+    AuthService,
+    AuthGuard,
+    AuthService,
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })
