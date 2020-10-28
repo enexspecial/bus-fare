@@ -1,32 +1,24 @@
 <div class="main-div">
-<mat-tab-group>
+    <mat-tab-group>
 
-  <mat-tab label="Receive Payment">
-    <div class="main-div">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title>
-            <button mat-raised-button color="accent">Click to start</button>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <qr-code [value]="dataToString" size="300"></qr-code>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </mat-tab>
+        <mat-tab label="Receive Payment">
+            <div class="main-div">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <button mat-raised-button color="accent">Click to start</button>
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <qr-code [value]="dataToString" size="300"></qr-code>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </mat-tab>
 
-  <mat-tab label="Make Payment">
-    <div class="main-div">
-      <button mat-raised-button color="accent">Click to start</button>
-    </div>
+        <mat-tab label="Make Payment">
+            <div class="main-div">
+                <button mat-raised-button color="accent">Load Wallet</button>
+            </div>
 
-  </mat-tab>
-
-
-</mat-tab-group>
-</div>
-
-
-
-
+        </mat-tab>
