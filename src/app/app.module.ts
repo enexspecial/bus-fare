@@ -13,7 +13,6 @@ import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
-import { AppService } from './app.service';
 import {CustomComponentModules} from '../app/custom-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +36,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TokenInterceptor } from './Auth/token.interceptor';
+import { AppService } from './Services/app.service';
 
 
 
