@@ -31,8 +31,8 @@ export class LoginComponent implements OnInit {
     };
 
     this.appservice.postData(`login`, Data).subscribe((res:any) => {
-      console.log(res);
       localStorage.setItem('token', JSON.stringify(res.data.token));
+      localStorage.setItem('User', JSON.stringify(res.data));
       let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl');
       this.router.navigate([returnUrl || '/dashboard/dash']);
     }, error => {

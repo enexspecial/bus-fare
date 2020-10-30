@@ -1,3 +1,4 @@
+import { AppService } from './../../Services/app.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,19 +8,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentComponent implements OnInit {
 
+  scannerEnabled: boolean = false;
+  barcode: boolean = false;
   amount:number = null;
-  data = {
-    'from': 'John',
-    'to': 'Kefas',
-    'amount': 100
-  };
+  user = JSON.parse(localStorage.getItem('User'));
+  dataToString:any;
 
-
-  dataToString = JSON.stringify(this.data);
-
-  constructor() { }
+  constructor(private appService:AppService) { }
 
   ngOnInit(): void {
+
+  }
+
+  generateBarcode(){
+    const Data = {
+      to: this.user.id,
+      amount: this.amount
+    };
+    this.dataToString = JSON.stringify(Data);
+    console.log(Data);
+    this.barcode = true;
+  }
+
+  stopBarcode(){
+    this.barcode = false;
+  }
+
+  enableScanner() {
+    this.scannerEnabled = true;
+  }
+
+  disableScanner(){
+    this.scannerEnabled = false;
+  }
+
+  scanSuccessHandler($event:any){
+    this.scannerEnabled = false;
+    console.log($event);
+    alert($event);
+    this.appService.payment('', $event).subscribe((data:any) =>{
+      alert("Success");
+    });
+
   }
 
 

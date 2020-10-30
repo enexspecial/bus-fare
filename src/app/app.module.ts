@@ -37,6 +37,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TokenInterceptor } from './Auth/token.interceptor';
 import { AppService } from './Services/app.service';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 
 
@@ -69,6 +70,7 @@ import { AppService } from './Services/app.service';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
+    ZXingScannerModule,
     MatButtonModule,
     MatListModule,
     HttpClientModule,

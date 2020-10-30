@@ -14,3 +14,12 @@
   align-items: center;
 }
 
+:host zxing-scanner::ng-deep video {
+  max-height: 50vh;
+  max-width: 50vh;
+  object-fit: contain;
+}
+:host zxing-scanner::ng-deep {
+  border-style: solid;
+  border-color: #5d78ff;
+}

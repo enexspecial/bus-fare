@@ -4,13 +4,18 @@
         <mat-tab label="Receive Payment">
             <div class="main-div">
                 <mat-card class="example-card">
+                  <mat-form-field *ngIf="!barcode">
+                    <mat-label>Amount</mat-label>
+                    <input type="number" name="amount" [(ngModel)]="amount" required placeholder="Amount" matInput>
+                </mat-form-field>
                     <mat-card-header>
                         <mat-card-title>
-                            <button mat-raised-button color="accent">Click to start</button>
+                            <button (click)="generateBarcode()" *ngIf="!barcode" mat-raised-button color="accent">Generate barcode</button>
+                            <button (click)="stopBarcode()" *ngIf="barcode" mat-raised-button color="accent">Stop barcode</button>
                         </mat-card-title>
                     </mat-card-header>
                     <mat-card-content>
-                        <qr-code [value]="dataToString" size="300"></qr-code>
+                        <qr-code  *ngIf="barcode" [value]="dataToString" size="300"></qr-code>
                     </mat-card-content>
                 </mat-card>
             </div>
@@ -18,7 +23,22 @@
 
         <mat-tab label="Make Payment">
             <div class="main-div">
-                <button mat-raised-button color="accent">Load Wallet</button>
+              <mat-card class="example-card">
+                <mat-card-header>
+                    <mat-card-title>
+                        <button (click)="enableScanner()" *ngIf="!scannerEnabled" mat-raised-button color="accent">Start Scanning</button>
+                        <button (click)="disableScanner()" *ngIf="scannerEnabled" mat-raised-button color="accent">Stop Scanning</button>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <zxing-scanner size="300" *ngIf="scannerEnabled" #scanner (scanSuccess)="scanSuccessHandler($event)">
+                  </zxing-scanner>
+                </mat-card-content>
+            </mat-card>
+
+
             </div>
 
         </mat-tab>
+</mat-tab-group>
+</div>
