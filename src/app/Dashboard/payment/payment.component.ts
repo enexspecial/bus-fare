@@ -1,5 +1,6 @@
 import { AppService } from './../../Services/app.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ZXingScannerComponent } from '@zxing/ngx-scanner';
 
 @Component({
   selector: 'app-payment',
@@ -7,6 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent implements OnInit {
+
+
+    @ViewChild('scanner')
+    scanner: ZXingScannerComponent;
+
+    hasCameras = false;
+    hasPermission: boolean;
+    qrResultString: string;
+
+    availableDevices: MediaDeviceInfo[];
+    selectedDevice: MediaDeviceInfo;
 
   scannerEnabled: boolean = false;
   barcode: boolean = false;
@@ -17,8 +29,14 @@ export class PaymentComponent implements OnInit {
   constructor(private appService:AppService) { }
 
   ngOnInit(): void {
-
   }
+
+  handleQrCodeResult(resultString: string) {
+    console.log('Result: ', resultString);
+    this.qrResultString = resultString;
+}
+
+
 
   generateBarcode(){
     const Data = {
